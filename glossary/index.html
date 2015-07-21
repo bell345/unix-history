@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>History of UNIX</title>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script src="assets/js/jquery2.min.js"></script>
+    <script src="assets/js/typer.js"></script>
+    <script src="assets/js/site.js"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>Glossary</h1>
+        <div class="sidebar"></div>
+        <div class="placeholder"></div>
+        <dl>
+            <dt id="bell-labs"><h3>Bell Labs</h3></dt>
+            <dd><p>Bell Labs is the research divsion of AT&T.</p></dd>
+
+            <dt id="c"><h3>C</h3></dt>
+            <dd><p><strong>C</strong> is a popular <dfn>high-level programming language</dfn>.
+                It is commonly used
+                in environments where speed is key and control over many aspects of the program
+                is needed. C is used in embedded systems and also in operating system design,
+                most notable of which is the UNIX kernel.
+            </p></dd>
+
+            <dt id="command-line-interface"><h3>Command line interface</h3></dt>
+            <dt id="cli"><h3>CLI</h3></dt>
+            <dd><p>
+                The <strong>command line interface</strong>, shortened to <strong>CLI</strong>, is a user interface
+                that primarily uses the concept of commands typed on a screen to accomplish tasks. While CLIs can
+                be non-intuitive, they can help massively with quick modification and complicated tasks that would
+                otherwise be prohibitively difficult with a GUI that can be done with only a few commands with a CLI.
+            </p></dd>
+
+            <dt id="daemon"><h3>Daemon</h3></dt>
+            <dd><p>
+                In UNIX and UNIX-like systems, a <strong>daemon</strong> is a program that performs its duties
+                in the background. They do not usually have <dfn>GUI</dfn>s, and usually provide
+                interfaces from the hardware, firmware and operating system to
+                <dfn>user-space</dfn> software.
+            </p><p>
+                The Windows equivalent is called a <strong>service</strong>.
+            </p></dd>
+
+            <dt id="graphical-user-interface"><h3>Graphical user interface</h3></dt>
+            <dt id="gui"><h3>GUI</h3></dt>
+            <dd><p>
+                A <strong>GUI</strong> is a user interface that heavily utilises GPU-drawn graphics such as bitmapped images, shapes,
+                and real-life metaphors such as icons in contrast of a <dfn>command-line interface</dfn> which uses only
+                rows and columns of text drawn uniformly to a screen.
+            </p></dd>
+
+            <dt id="high-level-programming-language"><h3>High-level programming language</h3></dt>
+            <dd><p>
+                High-level programming involves many structures and syntax that help the programmer
+                to avoid dealing with the low-level aspects of the hardware and <dfn>operating system</dfn>.
+            </p><p>
+                Examples of high-level programming languages include C++, Java, Haskell and Python.
+            </p></dd>
+
+            <dt id="massachusetts-institute-of-technology"><h3>Massachusetts Institute of Technology</h3></dt>
+            <dt id="mit"><h3>MIT</h3></dt>
+            <dd><p>
+                MIT is an institute for higher learning that specialises in technological progress. MIT alumni
+                have helped shape the worlds of technology and computer science.
+            </p></dd>
+
+            <dt id="minicomputer"><h3>Minicomputer</h3></dt>
+            <dd><p>
+                <!-- TODO: fill this out -->
+            </p></dd>
+
+            <dt id="monolithic"><h3>Monolithic</h3></dt>
+            <dd><p>
+                A <strong>monolithic</strong> application is one that performs all of the processes needed to
+                complete a specific task and is self-contained (that is, doesn't use any other programs to carry
+                out its function). Parts of a monolitic application cannot be used to complete other tasks.
+            </p></dd>
+
+            <dt id="multics"><h3>MULTICS</h3></dt>
+            <dd><p>
+                <strong>MULTICS</strong>, short for MULTiplexed Information and Computing Services, was an early
+                collaborative effort by Bell Labs, General Electric and MIT to develop an efficient <dfn>time-sharing</dfn>
+                system that could run on large mainframes. The project was later abandoned, and some engineers from Bell
+                Labs who previously worked on Multics moved on to develop UNIX.
+            </p></dd>
+
+            <dt id="multi-user"><h3>Multi-user</h3></dt>
+            <dd><p>
+                A <strong>multi-user</strong> <dfn>operating system</dfn> is one that supports use by more than
+                one computer user at one time. This is often acheived by remote login and/or multiple terminals.
+                <dfn>Time-sharing</dfn> systems are multi-user systems.
+            </p></dd>
+
+            <dt id="operating-system"><h3>Operating system</h3></dt>
+            <dd><p>
+                An <strong>operating system</strong> is a collection of software that provides an interface between
+                <dfn title="user-space">user</dfn> programs and the low-level hardware and firmware. The operating system
+                handles a variety of tasks, including startup, shutdown, I/O, file system read/write, etc.
+            </p></dd>
+
+            <dt id="piping"><h3>Piping</h3></dt>
+            <dd><p>
+                <strong>Piping</strong> is a feature in command-line interfaces that allows the output from one program
+                to be interpreted as the input to another program. It is called "piping" because the character that acheives
+                this for many interfaces, starting with UNIX, is the vertical bar <kbd>|</kbd>, sometimes called a "pipe".
+            </p></dd>
+
+            <dt id="regular-expression"><h3>Regular expression</h3></dt>
+            <dd><p>
+                A <strong>regular expression</strong> is a string of text interpreted as a pattern. It uses
+                metacharacters such as <code title="Start of a line">^</code> and <code title="End of a line">$</code> to represent
+                places in the text and constructs such as
+                <code title="Any character from A through Z">[A-Z]</code>,
+                <code title="Zero or one of the previous">?</code> and
+                <code title="One or more of the previous">+</code> to define the possible text strings that can fit the pattern.
+            </p><p>
+                Their syntax can be confusing at first, but their capabilities, combined with their wide adoption and use in <dfn>CLI</dfn>
+                programs, makes them invalulable to programmers and power users.
+            </p></dd>
+
+            <dt id="time-sharing"><h3>Time-sharing</h3></dt>
+            <dd><p>
+                <strong>Time-sharing</strong>, when relating to computing, is where one computer hosts multiple users
+                running different tasks at the same time. Time-sharing was utilised to take advantage of the free computer
+                resources available when one particular user is not processing a task (e.g. when they are entering a command
+                or away from the computer).
+            </p></dd>
+
+            <dt id="wildcard"><h3>Wildcard</h3></dt>
+            <dd><p>
+                The <strong>wildcard</strong> character (<kbd>*</kbd>) is used in many computer programs to represent a place
+                where any string of text could reside, even the zero-length string (e.g. <code>*.html</code> could mean ".html",
+                "a.html", "b.html", "ab.html", "bcc.html", etc.). Wildcard characters are a basic way to specify
+                multiple strings of text through a string specification (see <dfn>regular expression</dfn>s for a more advanced
+                method).
+            </p></dd>
+
+            <dt id="user-space"><h3>User space</h3></dt>
+            <dd><p>
+                <strong>User space</strong> is used to refer to programs run by the user of the computer voluntarily, as opposed
+                to <dfn title="kernel-space">kernel space</dfn>, where basic programs such as drivers and interfaces run and
+                interact with each other. It has been said by many, including <a href="people/torvalds">Linus Torvalds</a> (Linux
+                kernel creator/maintainer) that it is imperative to keep these two categories of programs seperate.
+            </p></dd>
+        </dl>
+    </main>
+</body>
+</html>

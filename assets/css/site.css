@@ -1,0 +1,319 @@
+@font-face {
+    font-family:"Lato";
+    font-weight:400;
+    font-style:normal;
+    src:local("Lato"), local("Lato Regular"), local("Lato-Regular"),
+        url(../res/fonts/lato.woff2) format("woff2"), url(../res/fonts/lato.woff) format("woff");
+}
+@font-face {
+    font-family:"Lato";
+    font-weight:700;
+    font-style:normal;
+    src:local("Lato Bold"), local("Lato-Bold"),
+        url(../res/fonts/lato.bold.woff2) format("woff2"), url(../res/fonts/lato.bold.woff) format("woff");
+}
+@font-face {
+    font-family:"Raleway";
+    font-weight:400;
+    font-style:normal;
+    src:local("Raleway"), url(../res/fonts/raleway.woff) format("woff");
+}
+@font-face {
+    font-family:"Raleway";
+    font-weight:700;
+    font-style:normal;
+    src:local("Raleway Bold"), url(../res/fonts/raleway.bold.woff) format("woff");
+}
+@font-face {
+    font-family:"Righteous";
+    font-weight:400;
+    font-style:normal;
+    src:local("Righteous"), url(../res/fonts/righteous.woff) format("woff");
+}
+@font-face {
+    font-family:'FontAwesome';
+    font-weight:400;
+    font-style:normal;
+    src: url(../res/fonts/font-awesome.woff) format('woff');
+}
+*, *::before, *::after {
+    margin:0;
+    padding:0;
+    border:0;
+    font-family:"Lato", "Open Sans", "Helvetica", "Arial", sans-serif;
+    box-sizing:border-box;
+    transition:0.2s all;
+}
+body {
+    background:linear-gradient(75deg, #333, #383838 45%, #484848 50%, #585858 50%, #555 55%, #484848) repeat fixed;
+    min-height:100%;
+}
+body::before {
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:-1;
+    background:linear-gradient(45deg, #ddd, #ddd 50%, #d2d2d2 50%, #d2d2d2) 25px 25px / 50px 50px repeat;
+    transition:0.8s all;
+}
+body.intro::before {
+    transition:0s all;
+    top:100%;
+}
+@keyframes blink{0%{opacity:1}50%{opacity:1}50.1%{opacity:0}100%{opacity:0}}
+
+header {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    padding:36px 20% 52px 20%;
+    color:#eee;
+    background:linear-gradient(75deg, #333, #383838 45%, #484848 50%, #585858 50%, #555 55%, #484848)  repeat fixed;
+    font-size:42px;
+    font-weight:bold;
+    font-family:monospace;
+    /*box-shadow:inset 0 0 0 2px #0f0, inset 0 0 16px 2px #0f0;*/
+    transition:0.8s all;
+}
+body.intro header {
+    box-shadow:none;
+    transition:0s all;
+}
+header::before {
+    content:"~ $";
+    color:#0f0;
+    margin-right:28px;
+    font-family:monospace;
+}
+header[data-directory]::before {
+    content:"~/" attr(data-directory) " $";
+}
+header::after {
+    content:"";
+    height:32px;
+    width:24px;
+    background:#0d0;
+    display:inline-block;
+    margin-left:12px;
+    animation:blink 2s infinite linear;
+}
+
+main {
+    position:absolute;
+    left:0;
+    right:0;
+    top:120px;
+    bottom:auto;
+    margin:auto;
+    width:75%;
+    background:#eee;
+    color:#333;
+    padding:24px 0 24px 15%;
+    border-bottom:12px solid #e2e2e2;
+    box-shadow:0 5px 5px #333, inset 0 -8px 8px -4px #aaa;
+    transition:0.8s all;
+    opacity:1;
+}
+main::before {
+    content:"";
+}
+main > * {
+    padding:0 38px;
+}
+body.intro main {
+    transition:0s all;
+    top:auto;
+    bottom:100%;
+    opacity:0;
+}
+
+.sidebar {
+    position:absolute;
+    top:0;
+    left:0;
+    width:20%;
+    min-width:220px;
+    padding:36px 24px;
+    margin-right:42px;
+    background:#333;
+    background:linear-gradient(75deg, #333, #383838 45%, #484848 50%, #585858 50%, #555 55%, #484848)  repeat fixed;
+    color:#eee;
+    box-shadow:0 8px 8px -4px #444;
+    text-align:center;
+    min-height:100%;
+}
+
+.navigation {
+    list-style-type:none;
+    margin-left:0;
+    padding:0;
+    margin-bottom:16px;
+    text-align:left;
+}
+.navigation li {
+    background:rgba(255, 255, 255, 0.15);
+    display:block;
+    overflow:hidden;
+    position:relative;
+}
+.navigation li a:hover {
+    background:rgba(0, 200, 255, 0.3);
+}
+.navigation li a {
+    color:#eee;
+    padding:4px 8px;
+    display:block;
+}
+
+h1 {
+    font-family:"Raleway", sans-serif;
+    font-size:42px;
+    margin-bottom:28px;
+}
+h2 {
+    font-family:"Raleway", sans-serif;
+    font-size:34px;
+    margin-bottom:22px;
+}
+h3 {
+    font-family:"Raleway", sans-serif;
+    font-size:24px;
+    margin-bottom:18px;
+}
+h4 {
+    font-family:"Raleway", sans-serif;
+    font-size:18px;
+    margin-bottom:14px;
+}
+
+.sidebar code {
+    white-space:nowrap;
+}
+
+code {
+    font-family:monospace;
+    padding:2px 8px;
+    font-size:14px;
+    display:inline-block;
+    background:rgba(200, 200, 200, 0.15);
+    border:1px solid rgba(230, 230, 230, 0.35);
+}
+code * {
+    font-family:monospace;
+}
+code span.comment {
+    color:#aaa;
+}
+
+p {
+    font-size:18px;
+    margin-bottom:14px;
+}
+*[data-popup] {
+    position:relative;
+    cursor:pointer;
+}
+*[data-popup]::before {
+    content:attr(data-popup);
+    position:absolute;
+    bottom:100%;
+    left:0;
+    background:#555;
+    padding:4px 8px;
+    color:#eee;
+    opacity:0;
+    z-index:-99;
+}
+*[data-popup]:hover::before {
+    opacity:1;
+    z-index:1;
+}
+
+a, *[data-popup] {
+    color:#09f;
+    text-decoration:none;
+}
+a:hover, *[data-popup]:hover {
+    color:#2bf;
+}
+a:active, *[data-popup]:active {
+    color:#555;
+}
+
+sup {
+    vertical-align:text-top;
+    font-size:60%;
+}
+
+p.note {
+    background:#ddd;
+    padding:24px 38px;
+    margin-top:14px;
+    border:2px dotted #aaa;
+    border-width:2px 0 2px 0;
+}
+
+abbr {
+    border-bottom:2px dotted #555;
+}
+
+.navigation li > ul {
+    max-height:0;
+    transition:0.8s all;
+    margin-left:0;
+    padding:0;
+}
+.navigation li:hover > ul {
+    max-height:800px;
+    transition:2.5s all;
+}
+.navigation li > ul > li > a {
+    padding-left:22px;
+    list-style-type:none;
+}
+.navigation li > ul::before, li > ul::after {
+    content:"";
+    position:absolute;
+    top:12px;
+    right:8px;
+    height:4px;
+    width:16px;
+    background:#eee;
+}
+.navigation li > ul::after {
+    transform:rotate(90deg);
+}
+.navigation li:hover > ul::after {
+    transform:none;
+}
+
+.sidebar aside {
+    color:#aaa;
+    font-size:10px;
+    padding-top:12px;
+}
+
+main ul {
+    margin-left:36px;
+    padding:0 28px;
+    list-style-type:none;
+}
+
+figure.side {
+    float:right;
+    max-width:30%;
+    padding:12px 18px;
+    margin:8px 12px;
+    background:#555;
+    text-align:center;
+}
+figure.side img {
+    width:100%;
+}
+figure.side figcaption {
+    color:#eee;
+}

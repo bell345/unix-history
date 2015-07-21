@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>History of UNIX</title>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script src="assets/js/jquery2.min.js"></script>
+    <script src="assets/js/typer.js"></script>
+    <script src="assets/js/site.js"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>The Early History of UNIX</h1>
+        <div class="sidebar">
+        </div>
+        <p>
+            UNIX's inspiration came from Multics - an early <dfn>time-sharing</dfn> system developed from 1964 &mdash; 1969 by <dfn>MIT</dfn>, General Electric and
+            <dfn>Bell Labs</dfn>. Multics is actually an acronym, standing for <strong>MULTI</strong>plexed <strong>I</strong>formation and
+            <strong>C</strong>omputing <strong>S</strong>ervices. Bell Labs withdrew from the Multics project in 1969, and the Bell Labs developers working on the project were without
+            something to do, <a href="people/ken">Ken Thompson</a> and <a href="people/dmr">Dennis Ritchie</a> among them. Thompson and Ritchie began work
+            on another operating system to bide their time - a replacement for Multics on the compact PDP-7 mainframe computer. One wise-cracking colleague
+            suggested it be called the <strong>UN</strong>iplexed <strong>I</strong>formation and <strong>C</strong>omputing <strong>S</strong>ervices; it
+            was similar to Multics, but with less power and for smaller machines. UNICS, later changed to UNIX, was the name that stuck.
+        </p><p class="note">
+            <strong>Did you know?: </strong> UNIX was first developed to host a game that Thompson wrote called
+            <cite><a href="http://sites.fas.harvard.edu/~lib215/reference/history/spacetravel.html">"Space Travel"</a></cite> that was originally written
+            for the GE-645, but development was hampered by its price ($75/hour!). A dusty PDP-7 laying around was picked up by Thompson, and then saw the need
+            for a compact operating system for the PDP-7 in order to run his game.
+        </p>
+        <figure class="side">
+            <img src="http://web.mit.edu/saltzer/www/GE645.jpg" alt="GE-645 Mainframe" />
+            <figcaption>The GE-645 mainframe, where <dfn>Multics</dfn> was developed</figcaption>
+        </figure>
+        <p>
+            UNIX is based upon a more simple and modular philosophy that was very different from other mainframe systems of the time. Thompson and Ritchie aimed
+            to create an operating system based around a large collection of software tools that perform one task, as opposed to <dfn>monolithic</dfn> applications
+            that handle a variety of tasks and may share the same internal functions. Another core part of the philosophy was <dfn>piping</dfn> - using the output
+            of one program as the input of another - an example is using the commands that print the text content of a file (<code>cat file.txt</code>) and finds all
+            lines that start with A (<code>grep -E "^A"</code>) and piping the inputs as so: <code>cat file.txt | grep -E "^A"</code>.
+        </p><p>
+            The first real test of UNIX came when the text formatting utilities of the system were beginning to be used by AT&amp;T's patent department. It was a huge
+            success for the patent examiners and the UNIX developers, as they now had greater credibility to purchase a more powerful PDP-11. All these new programs
+            required a new form of documentation;
+            The UNIX Programmer's Manual was published on the 3rd of November 1971, and included command documentation written in the "man page" format &mdash;
+            terse, descriptive summaries of the commands, their arguments, what they do, and the programmer's contact details; all interactively provided
+            inside UNIX itself by typing <code>man &lt;command&gt;</code>. As UNIX was in constant
+            development, many people simply described the version of UNIX as the version of The UNIX Programmer's Manual that was written for it.
+        </p><p>
+            The first edition of UNIX had a number of innovative features, one in particular that we all now take for granted &mdash; a <em>hierarchical file system</em>.
+            This meant that files could now be sorted into directories, which could also contain other directories. At the time, file names could only be six characters
+            large, but this was seen as plenty enough. Another innovative idea was to rewrite the entirety of UNIX in <dfn>C</dfn>, a <dfn>high-level programming language</dfn>.
+            Operating systems were previously written only in assembly code, which was non-portable, verbose and very hard to remix and develop. Solving that problem
+            by expressing it in a language that many considered didn't offer the control that operating systems required was a big deal at the time, and UNIX derivatives
+            are still written in C today.
+        </p><p>
+
+        </p>
+    </main>
+</body>
+</html>

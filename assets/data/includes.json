@@ -1,0 +1,16 @@
+{
+    "includes": [
+        {
+            "id": "sidebar",
+            "source": "assets/html/sidebar.htm",
+            "insert": ".sidebar",
+            "replace": true
+        },
+        {
+            "id": "placeholder",
+            "source": "assets/html/placeholder.htm",
+            "insert": ".placeholer",
+            "replace": true
+        }
+    ]
+}
