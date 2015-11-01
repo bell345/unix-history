@@ -12,9 +12,56 @@
 <body>
     <header></header>
     <main>
-        <h1>Title goes here (page isn't done yet)</h1>
+        <h1>UNIX Wars - Berkeley vs. AT&amp;T</h1>
         <div class="sidebar">
         </div>
+        <figure class="side">
+            <img src="assets/img/i386.png" alt="Intel 80386 microprocessor" />
+            <figcaption>Intel 80386: cheap, powerful, inelegant. Its x86 architecture underpins almost all modern computing.</figcaption>
+        </figure>
+        <p>
+            When AT&amp;T moved into the UNIX market, two things were beginning to take shape.
+            One, the first round of UNIX infighting, often referred to as the UNIX Wars, and
+            two, Intel microprocessors (specifically the 386) started to become powerful enough to run UNIX on personal
+            machines. This not only meant that UNIX could become even more widespread, but it also
+            meant that workstation vendors, such as <dfn title="sun-microsystems">Sun</dfn> and
+            <dfn>SCO</dfn> had a much easier job of making the perfect UNIX workstation.
+        </p><p>
+            The fighting over System V (AT&amp;T) and <a href="derivatives#bsd">BSD</a> stemmed
+            from the different cultures of the two platforms. BSD hackers were more free and
+            anti-authority than those working on SysV, which they saw as backwards and bogged
+            down by corporate mess. There were also technical disputes; over the networking APIs
+            (streams vs. sockets) for example.
+        </p><p>
+            Efforts to unify the competing UNIX standards began in earnest with the 1985 <dfn>POSIX</dfn>
+            standards, which made executive decisions on the functionality of a standardised UNIX. For example,
+            Berkeley sockets were preferred over SysV streams, but SysV terminal controls were preferred over
+            BSD tty. All derived UNIXes coming after adhered to these standards to some extent, which helped
+            to quell the current UNIX disputes.
+        </p>
+        <figure class="side">
+            <img src="assets/img/stallman.jpg" alt="Richard Stallman" />
+            <figcaption>Richard Stallman is known for being a fervent open-source activist and founder of the GNU Project.</figcaption>
+        </figure>
+        <p>
+            In 1985, <a href="people/stallman">Richard Stallman</a> founded the <dfn>GNU Project</dfn>,
+            with an end goal of creating a fully open and free operating system from the ground-up. And
+            in the beginning, although many people shared some of his ideals, he was never taken too
+            seriously around the likes of <dfn>IBM</dfn>, Sun and AT&amp;T, who were the epitome of <dfn>proprietary</dfn>
+            commercial giants and who ruled the computer market.
+        </p><p>
+            Speaking of IBM, in 1986, they made a fatal decision that caused them to back out of the
+            PC market. OS/2 and the machines it ran on, while gaining a foothold in the point-of-sale
+            market, never took off in the personal computer market, partly due to the fact that it ran
+            on older 286 processors instead of the newer 386. Compaq managed to outmode them and provide
+            the first UNIX-capable personal computer with a 386, despite the 16 MHz clock speed.
+        </p><p>
+            Make no mistake, IBM's previous standard, the soon-to-be-ubiquitous IBM PC still posed a massive
+            threat to the UNIX industry. Especially from Microsoft, which had grown from a Seattle podunk startup
+            to a major player in the software market with their flagship, MS-DOS. The following decade revealed a
+            new card up Microsoft's sleeves: Microsoft Windows 3.0, which made the <dfn>GUI</dfn> a standard interface
+            and cemented their influence on the computing industry.
+        </p>
     </main>
 </body>
 </html>

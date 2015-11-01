@@ -94,12 +94,15 @@ header[data-directory]::before {
 }
 header::after {
     content:"";
-    height:32px;
+    height:42px;
     width:24px;
     background:#0d0;
     display:inline-block;
     margin-left:12px;
     animation:blink 2s infinite linear;
+    animation-delay:2s;
+    position:relative;
+    top:8px;
 }
 
 main {
@@ -113,8 +116,7 @@ main {
     background:#eee;
     color:#333;
     padding:24px 0 24px 15%;
-    border-bottom:12px solid #e2e2e2;
-    box-shadow:0 5px 5px #333, inset 0 -8px 8px -4px #aaa;
+    box-shadow:0 2px 8px #333;
     transition:0.8s all;
     opacity:1;
 }
@@ -302,13 +304,14 @@ main ul {
     padding:0 28px;
     list-style-type:none;
 }
+main > *:not(.sidebar) ul {
+    margin-bottom:18px;
+}
 
 figure.side {
     float:right;
-    max-width:30%;
-    padding:12px 18px;
+    max-width:40%;
     margin:8px 12px;
-    background:#555;
     text-align:center;
 }
 figure.side img {
@@ -316,4 +319,6 @@ figure.side img {
 }
 figure.side figcaption {
     color:#eee;
+    padding:12px 18px;
+    background:#555;
 }
